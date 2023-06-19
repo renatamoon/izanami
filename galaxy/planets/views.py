@@ -1,23 +1,21 @@
 # STANDARD IMPORTS
 from rest_framework import viewsets, status
-from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
 
+from galaxy.planets.services import PlanetServices
 
-class LandingPageViewSetTreemap(viewsets.ViewSet):
-    permission_classes = (IsAuthenticated,)
+
+class PlanetRegistrationViewSet(viewsets.ViewSet):
 
     def list(self, request):
         try:
-            dynamic_filters = request.query_params
-            # getUserRestriction(request, dynamic_filters)
-
-            # data = LandingPageServices.get_treemap_directory_area_and_management_level(dynamic_filters)
+            params = request.query_params
+            response = PlanetServices.get_planets(params)
 
             response = dict({
                     'status_code': status.HTTP_200_OK,
                     'message': 'OK',
-                    'data': 0
+                    'data': response
             })
             return JsonResponse(response, safe=False)
 
