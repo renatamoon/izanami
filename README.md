@@ -55,7 +55,7 @@ CRUD system of another galaxy to get, create, update and remove planet data.
 <b>-Clone the repo<br>
 <b>-Create the environment:</b> `virtualenv venv`<br>
 <b>-Activating the virtual environment:</b> `. venv/bin/activate`<br>
-<b>-Execute the requirements:</b> `pip install -r requirements.txt`<br>
+<b>-Execute the requirements when you're in galaxy/ folder on commandline:</b> `pip install -r requirements.txt`<br>
   
  <hr> 
   
@@ -74,8 +74,8 @@ DATABASES = {
 }
 ```
 
-- Migrate: `python manage.py migrate` <br>
-- Execute the server: `python manage.py runserver` <br>
+- Migrate when you're in galaxy/ folder path on commandline: `python manage.py migrate` <br>
+- Execute the server when you're in galaxy/ folder path on commandline: `python manage.py runserver` <br>
   
 <hr>
 
