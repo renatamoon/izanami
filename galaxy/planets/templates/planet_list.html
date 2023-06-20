@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title text-center"><b>LIST PLANET DATA</b></h4>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Planet Name</th>
+                    <th scope="col">Chemical Elements</th>
+                    <th scope="col">Water Percentage</th>
+                    <th scope="col">Distance</th>
+                    <th scope="col">Life Probability</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for planet in planets %}
+                <tr>
+                    <td>{{ planet.planet_name }}</td>
+                    <td>{{ planet.chemical_elements }}</td>
+                    <td>{{ planet.water_percentage }}</td>
+                    <td>{{ planet.distance }}</td>
+                    <td>{{ planet.probability }}</td>
+                    <td>
+                        <a href="/planet_update/{{ planet.id }}" class="btn btn-outline-primary">
+                            <i class="fas fa-edit"></i> Update
+                        </a>
+                        <a href="/planet_delete/{{ planet.id }}" class="btn btn-outline-danger">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'planet_create' %}" class="btn btn-success">
+            <i class="fas fa-plus"></i> REGISTER
+        </a>
+    </div>
+</div>
+{% endblock %}

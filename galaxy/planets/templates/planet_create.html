@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h4 class="card-title text-center"><b>CREATE PLANET DATA</b></h4>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.planet_name.id_for_label }}"><b>Planet Name:</b></label>
+                {{ form.planet_name }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.chemical_elements.id_for_label }}"><b>Chemical Elements:</b></label>
+                {{ form.chemical_elements }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.water_percentage.id_for_label }}"><b>Water Percentage:</b></label>
+                {{ form.water_percentage }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.distance.id_for_label }}"><b>Distance:</b></label>
+                {{ form.distance }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.probability.id_for_label }}"><b>Life Probability:</b></label>
+                {{ form.probability }}
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="{% url 'planet_list' %}" class="btn btn-outline-danger mr-2">
+                    <i class="fas fa-times"></i> Cancel
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-check"></i> Register
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
