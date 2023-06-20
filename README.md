@@ -86,18 +86,18 @@ Initial Page: <br>
 - List of Planet Informaition:
 <br>
 <br>
-![image](https://github.com/renatamoon/izanami/assets/87100340/5346324a-bf58-4adf-9348-0282a46f70b8)
+![image](https://github.com/renatamoon/izanami/assets/87100340/5346324a-bf58-4adf-9348-0282a46f70b8.png)
 <br>
 <br>
 - Creating a new planet data:
 <br>
-![image](https://github.com/renatamoon/izanami/assets/87100340/01e9d8ec-f85d-465f-b95c-a411cc0c2604)
+![image](https://github.com/renatamoon/izanami/assets/87100340/01e9d8ec-f85d-465f-b95c-a411cc0c2604.png)
 
 <br>
 <br>
 - Updating the already existant planet data:
 <br>
-![image](https://github.com/renatamoon/izanami/assets/87100340/3e15a613-d0f1-43aa-9983-ca2a0b0e9e22)
+![image](https://github.com/renatamoon/izanami/assets/87100340/3e15a613-d0f1-43aa-9983-ca2a0b0e9e22.png)
 
 <br>
 <hr>
